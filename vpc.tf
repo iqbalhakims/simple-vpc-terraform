@@ -70,7 +70,7 @@ resource "aws_security_group" "main" {
 
 # EC2 Instance in Public Subnet
 resource "aws_instance" "public_server" {
-  ami           = "ami-0c55b159cbfafe1f0"  # Replace with your desired AMI ID
+  ami           = "ami-060e277c0d4cce553"  # Replace with your desired AMI ID
   instance_type = "t2.micro"
   subnet_id     = aws_subnet.public-server.id
   security_groups = [aws_security_group.main.name]
@@ -82,7 +82,7 @@ resource "aws_instance" "public_server" {
 
 # EC2 Instance in Private Subnet
 resource "aws_instance" "private_server" {
-  ami           = "ami-0c55b159cbfafe1f0"  # Replace with your desired AMI ID
+  ami           = "ami-060e277c0d4cce553"  # Replace with your desired AMI ID
   instance_type = "t2.micro"
   subnet_id     = aws_subnet.private-subnet.id
   security_groups = [aws_security_group.main.name]
